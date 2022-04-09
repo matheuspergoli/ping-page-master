@@ -16,7 +16,6 @@ function sendForm(event) {
     email.classList.add('error')
     showModal(modalError)
     closeModal(modalError)
-    return
   }
 }
 
