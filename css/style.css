@@ -104,3 +104,24 @@ body {
   width: 100%;
   text-align: center;
 }
+
+#icons {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
+
+#icons * {
+  display: block;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+
+#copy {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--gray);
+}
