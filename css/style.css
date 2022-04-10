@@ -77,7 +77,38 @@ body {
   text-align: center;
 }
 
+#form div {
+  position: relative;
+  flex-grow: 2;
+}
+
+#form div p {
+  opacity: 0;
+  position: absolute;
+  left: 10px;
+  bottom: -15px;
+  font-size: 1.2rem;
+  color: var(--light-red);
+}
+
+#form div p.active {
+  animation: showErrorMsg 300ms forwards;
+}
+
+@keyframes showErrorMsg {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 #email {
+  width: 100%;
   flex-grow: 2;
   text-align: left;
   flex-basis: 20rem;

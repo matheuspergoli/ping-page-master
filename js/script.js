@@ -9,11 +9,13 @@ function sendForm(event) {
   const email = form.querySelector('#email')
   if (email.value.match(validEmail)) {
     email.classList.remove('error')
+    email.nextElementSibling.classList.remove('active')
     email.value = ''
     showModal(modalSuccess)
     closeModal(modalSuccess)
   } else {
     email.classList.add('error')
+    email.nextElementSibling.classList.add('active')
     showModal(modalError)
     closeModal(modalError)
   }
@@ -28,5 +30,5 @@ function showModal(modal) {
 function closeModal(modal) {
   setTimeout(() => {
     modal.close()
-  }, 3500)
+  }, 2000)
 }
